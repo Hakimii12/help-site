@@ -1,3 +1,5 @@
+import Feed from "../../components/feed"
+
 function Home() {
   return (
     <section className="w-full flex-center flex-col">
@@ -11,6 +13,7 @@ function Home() {
         promptopia is an open-source AI promting tool for moder world to discover,
         create and share creative prompts
     </p>
+    <Feed/>
     </section>
   )
 }
