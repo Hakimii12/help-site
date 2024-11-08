@@ -153,10 +153,9 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
-.btn_display{
-  @apply sm:flex hidden
- 
-}
 .btn_aligne{
   @apply w-[300px] flex gap-1
+}
+.section{
+  @apply flex flex-col justify-center items-center
 }

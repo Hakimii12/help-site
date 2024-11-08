@@ -9,14 +9,14 @@ function Nav() {
         <Link href="/" className="flex gap-2 flex-center">
          <Image
      src="/assets/images/logo.svg"
-     width={30}
-     height={30}
+     width={37}
+     height={37}
      alt="promtopia logo"
      className="object-contain"
      />
       <p className="logo_text">Promptopia</p>
         </Link>
-   <div className="btn_display "> 
+   <div> 
         {isUserLoggedIn ? 
         <div className=" flex gap-2 md:gap-5  btn_aligne">
             <Link href="/components" className="black_btn ">
@@ -28,9 +28,10 @@ function Nav() {
             <Link href="/profile">
             <Image
             src="/assets/images/logo.svg"
-            width={30}
-            height={30}
+            width={37}
+            height={37}
             alt="profile pic"
+            className="md:mt-1"
             />
             </Link>
         </div>
