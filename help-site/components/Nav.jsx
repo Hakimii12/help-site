@@ -1,4 +1,4 @@
-
+'use client '
 import Image from "next/image"
 import Link from "next/link"
 import { signIn,signOut,useSession,getProviders} from 'next-auth/react'
@@ -22,8 +22,16 @@ function Nav() {
             <Link href="/components" className="black_btn ">
                     create post
             </Link>
-            <Link href='/signout' className="outline_btn ">
+            <button href='/signout' className="outline_btn ">
                  signOut
+            </button>
+            <Link href="/profile">
+            <Image
+            src="/assets/images/logo.svg"
+            width={30}
+            height={30}
+            alt="profile pic"
+            />
             </Link>
         </div>
         

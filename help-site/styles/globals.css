@@ -158,5 +158,5 @@
  
 }
 .btn_aligne{
-  @apply w-[250px] flex gap-1
+  @apply w-[300px] flex gap-1
 }
