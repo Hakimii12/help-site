@@ -16,8 +16,8 @@ function Nav() {
      />
       <p className="logo_text">Promptopia</p>
         </Link>
-   <div> 
-        {isUserLoggedIn ? 
+   <div className="md:flex hidden"> 
+        {isUserLoggedIn ?
         <div className=" flex gap-2 md:gap-5  btn_aligne">
             <Link href="/components" className="black_btn ">
                     create post
