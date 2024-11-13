@@ -1,9 +1,20 @@
-'use client '
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { signIn,signOut,useSession,getProviders} from 'next-auth/react'
+import { useEffect, useState } from "react";
 function Nav() {
-    const isUserLoggedIn=true;
+    const isUserLoggedIn=false;
+    const [providers,setProviders]=useState(null)
+useEffect(()=>{
+  const setProvider=async()=>{
+    const response=await getProviders();
+    setProviders(response);
+    console.log(providers)
+  }
+ setProvider()
+},[])
+
   return (
     <nav className="w-full flex-between ">
         <Link href="/" className="flex gap-2 flex-center">
@@ -36,7 +47,21 @@ function Nav() {
             </Link>
         </div>
         
-    :"dsl"}</div>
+    :<>
+    {providers &&
+    Object.values(providers).map((provider)=>{
+      return(
+        <button
+        type="button"
+        key={provider.name}
+        onClick={()=> signIn(provider.id)}
+        >
+           Sign In
+        </button>
+      )
+    })
+    }
+    </>}</div>
     
     </nav>
   )
