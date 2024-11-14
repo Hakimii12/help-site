@@ -33,7 +33,7 @@ useEffect(()=>{
             <Link href="/components" className="black_btn ">
                     create post
             </Link>
-            <button href='/signout' className="outline_btn ">
+            <button href='/signout' className="outline_btn">
                  signOut
             </button>
             <Link href="/profile">
@@ -52,6 +52,8 @@ useEffect(()=>{
     Object.values(providers).map((provider)=>{
       return(
         <button
+
+        className="signin_btn"
         type="button"
         key={provider.name}
         onClick={()=> signIn(provider.id)}
