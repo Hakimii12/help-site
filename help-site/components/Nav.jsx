@@ -46,7 +46,6 @@ useEffect(()=>{
             />
             </Link>
         </div>
-        
     :<>
     {providers &&
     Object.values(providers).map((provider)=>{
@@ -68,5 +67,4 @@ useEffect(()=>{
     </nav>
   )
 }
-
 export default Nav
